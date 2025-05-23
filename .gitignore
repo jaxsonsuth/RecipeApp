@@ -1,0 +1,9 @@
+# Conda environment
+/recipe-recommender/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# PostgreSQL data files (if needed)
+/opt/homebrew/var/postgresql*
