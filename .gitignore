@@ -7,3 +7,5 @@ __pycache__/
 
 # PostgreSQL data files (if needed)
 /opt/homebrew/var/postgresql*
+
+.env

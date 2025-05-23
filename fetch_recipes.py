@@ -1,5 +1,9 @@
 import requests
 import psycopg2
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Database connection parameters
 db_params = {
@@ -14,7 +18,7 @@ def get_db_connection():
 
 # Fetch random recipes from the Spoonacular API
 def fetch_recipes():
-    API_KEY = '4c8c315f5eaf4c9a8cfb2f8e1c5538ca'
+    API_KEY = os.getenv('SPOONCULAR_API_KEY') 
     API_URL = f'https://api.spoonacular.com/recipes/random?apiKey={API_KEY}&includeNutrition=true&number=5'
 
     response = requests.get(API_URL)
