@@ -18,9 +18,10 @@ def get_db_connection():
 
 # Fetch random recipes from the Spoonacular API
 def fetch_recipes():
-    API_KEY = os.getenv('SPOONCULAR_API_KEY') 
+    API_KEY = os.getenv('SPOONACULAR_API_KEY') 
     API_URL = f'https://api.spoonacular.com/recipes/random?apiKey={API_KEY}&includeNutrition=true&number=5'
 
+    print(API_KEY)
     response = requests.get(API_URL)
     
     if response.status_code == 200:
