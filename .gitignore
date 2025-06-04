@@ -32,3 +32,8 @@ frontend/.env.*
 # Vite timestamp artifacts
 frontend/vite.config.js.timestamp-*
 frontend/vite.config.ts.timestamp-*
+
+# Terraform state and build artifacts
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/.terraform/
