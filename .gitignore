@@ -37,3 +37,4 @@ frontend/vite.config.ts.timestamp-*
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
 infra/.terraform/
+infra/terraform.tfvars
