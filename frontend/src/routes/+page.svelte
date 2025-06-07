@@ -7,7 +7,7 @@
     loading = true;
     error = null;
     try {
-      const res = await fetch('http://localhost:8000/random_recipe');
+      const res = await fetch('http://backend:8000/random_recipe');
       if (!res.ok) throw new Error('Failed to fetch recipe');
       recipe = await res.json();
     } catch (err) {

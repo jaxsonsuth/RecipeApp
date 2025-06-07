@@ -1,3 +1,4 @@
+import os
 import psycopg2
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,10 +15,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 db_params = {
-    'dbname': 'recipe_db',
-    'user': 'jacksonsutherland',
-    'host': 'localhost'
+    'dbname': os.getenv('DB_NAME'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'host': os.getenv('DB_HOST'),
+    'port': os.getenv('DB_PORT', 5432)
 }
 
 @app.get("/random_recipe")
